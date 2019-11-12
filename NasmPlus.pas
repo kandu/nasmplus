@@ -66,12 +66,12 @@ begin
       {$IFDEF Windows}
         exec('cmd','/c type '+MainDir+'help\nasmplushelp.txt');
       {$ELSE}
-        shell('cat '+MainDir+'help/nasmplushelp.txt');
+        fpSystem('cat '+MainDir+'help/nasmplushelp.txt');
       {$ENDIF}
     {$IFDEF Windows}
       exec('cmd','/c nasm '+ParamStr(Counter0-1));
     {$ELSE}
-      shell('nasm '+ParamStr(Counter0-1));
+      fpSystem('nasm '+ParamStr(Counter0-1));
     {$ENDIF}
   end else
   begin
@@ -88,7 +88,7 @@ begin
         {$IFDEF Windows}		//若预处理成功则调用NASM汇编预处理后的文件
           exec('cmd','/c nasm '+NasmCmd);
         {$ELSE}
-          shell('nasm '+NasmCmd);
+          fpSystem('nasm '+NasmCmd);
         {$ENDIF}
       end else
       begin
