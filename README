@@ -1,0 +1,16 @@
+{The encoding of these files is UTF-8, if you can not read the words below, try select UTF-8 as the default encoding of your text reader.}
+
+NasmPlus	献给：我的妹妹	作者：张道远(Kandu)
+如果你是开发者：
+    安装好fpc（Free Pascal）后。
+    如果你是在UNIX like的系统上：
+        进入此目录，输入 make 就能在 out 文件夹中得到 NasmPlus。
+        输入 make clean 就可以清除目标和中间文件。
+    如果你是在Windows系统上：
+        输入 make OS=Windows 就可以在out文件夹下得到NasmPlus.exe。
+        输入 make clean OS=Windows 就可以清除目标文件和中间文件。
+
+如果只是使用：
+    已经在out目录中包含了编译完成的 Linux-i386 和 win32 版的NasmPlus。
+
+out目录只是为编译而设置的临时目录。最好将NasmPlus复制到help文件夹同一目录下，此版本为alpha版，所以我尚未写安装脚本。如果你要安装这个程序，将NasmPlus文件和help文件复制到目标目录，确保环境变量正确即可。

@@ -1,0 +1,32 @@
+NasmPlus，献给：我的妹妹
+NasmPlus是基于nasm的工具。如果要使得NasmPlus可以生成编译结果，则必须已经安装好nasm并设置好PATH环境变量。
+增加的语法：
+  #if
+    “#if”判断语句。“#if”后面写逻辑判断语句。下一行开始书写程序体，以“#end”行结尾。可用#else。
+  #while
+    “#while”循环语句。“#while”后面写逻辑判断语句。下一行开始书写程序体，以“#end”行结尾。
+  #repeat
+    “#repeat”循环语句。下一行开始书写程序体，以“#until”行结尾。“until”后面写逻辑判断语句。
+  #and
+    “#and”逻辑语句。“#and”后面括号内写两个逻辑判断语句，并以“,”分隔。以括号做定位。
+  #or
+    “#or”逻辑语句。“#or”后面括面内写两个逻辑判断语句，并以“,”分隔，以括号做定位。
+  #not
+    “#not”逻辑语句。“#not”后面括号内为一个逻辑判断语句，以括号做定位。对括号内逻辑语句的结果取反。
+  #z?，#e?，#nz?，#ne?，#s?，#ns?，#o?，#no?，#p?，#pe?，#np?，#po?，#b?，#nae?，#c?，#nb?，#ae?，#nc?，#be?，#na?，#nbe?，#a?，#l?，#nge?，#nl?，#ge?，#le?，#ng?，#nle?，#g?，#cxz?
+    逻辑语句。可单独作用。
+  #>，#<=，#s>，#s<=，#>=，#<，#s>=，#s<，#=，#<>，#t，#nt
+    逻辑语句。后面必须加括号并给出被判断的两个操作数。
+
+    给出的第一个命令行参数必须是待编译的文件名，除此以外，NasmPlus完全兼容nasm，所有对nasm可行的参数都可以用在NasmPlus上，因为NasmPlus是调用nasm来完成操作，所以，即使nasm升级了，NasmPlus仍然可以保持和nasm的兼容。Nasmplus相对于nasm的扩展部分只是上述的语法。
+
+示例：
+  NasmPlus -v
+    查看此程序版本和nasm版本
+  NasmPlus -h
+    查看本帮助和nasm的帮助
+  NasmPlus tesm.asm -o test.bin
+    编译测试用源码并输出为test.bin
+
+更多信息，请参阅 NasmPlus.pdf 文件。
+以下为nasm的帮助部分：
